@@ -30,12 +30,12 @@ namespace ClinicaViavaEstetica.Controllers
         }
 
         // GET: Agenda/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
-            return View();
+            return View(this._AgendaRepository.get(id));
         }
 
-        private IEnumerable<SelectListItem> GetRoles()
+        private IEnumerable<SelectListItem> GetOptions()
         {
             var dbUserRoles = this._ServicoRepository.List();
             var roles = dbUserRoles
@@ -52,7 +52,7 @@ namespace ClinicaViavaEstetica.Controllers
         public ActionResult Create()
         {
             var model = new AgendaViewModel {
-                Options = GetRoles()
+                Options = GetOptions()
             };
 
             return View(model);
@@ -64,14 +64,12 @@ namespace ClinicaViavaEstetica.Controllers
         {
             try
             {
-                
-
                 var Agenda = Mapper.Map<Agenda>(agendaViewModel);
-                var date1 = agendaViewModel.DataMarcacao.Day;
                 var Cliente = this._ClienteRepository.get(Session["id"].ToString());
                 var Servico = this._ServicoRepository.get(agendaViewModel.selectedId.ToString());
                 Agenda.Cliente = Cliente;
                 Agenda.Servico = Servico;
+                Servico.Agenda = Agenda;
 
                 this._AgendaRepository.Insert(Agenda);
                 return RedirectToAction("Index");
@@ -83,40 +81,37 @@ namespace ClinicaViavaEstetica.Controllers
         }
 
         // GET: Agenda/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
-            return View();
+            return View(this._AgendaRepository.get(id));
         }
 
         // POST: Agenda/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(string id, Agenda agenda)
         {
-            try
-            {
+           
                 // TODO: Add update logic here
-
+                this._AgendaRepository.Update(agenda);
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            
         }
 
         // GET: Agenda/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
+            return View(this._AgendaRepository.get(id));
             return View();
         }
 
         // POST: Agenda/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(string id, Agenda angenda)
         {
             try
             {
                 // TODO: Add delete logic here
+                this._AgendaRepository.Cancelar(angenda);
 
                 return RedirectToAction("Index");
             }

@@ -1,0 +1,57 @@
+﻿@model ClinicaViavaEstetica.Models.Agenda
+
+@{
+    ViewBag.Title = "Reagendar";
+}
+
+
+<div class="row">
+    <hr />
+    <h2 class="text-info">Agenda >> Cancelar</h2>
+    <hr />
+    <div class="col-md-8 col-md-offset-2">
+        <h2>Cancelar</h2>
+
+        <h3>Tens certeza de que pretendes cancelar?</h3>
+        <div>
+            <h4>Agenda</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Descricao)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Estado)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Estado)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DataMarcacao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DataMarcacao)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Cancelar" class="btn btn-default" /> |
+                    @Html.ActionLink("Listar", "Index")
+                </div>
+            }
+        </div>
+    </div>
+</div>

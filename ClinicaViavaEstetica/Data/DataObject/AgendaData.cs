@@ -27,7 +27,7 @@ namespace ClinicaViavaEstetica.Data.DataObject
             return Lista.FirstOrDefault(x => x.Id.ToString() == id);
         }
 
-        public static void Update(Agenda Agenda)
+        public static bool Update(Agenda Agenda)
         {
             var currentAgenda = Get(Agenda.Id.ToString());
             if (Get(currentAgenda.Id.ToString()) != null)
@@ -36,6 +36,21 @@ namespace ClinicaViavaEstetica.Data.DataObject
                 currentAgenda.Descricao = Agenda.Descricao;
                 currentAgenda.Estado = Agenda.Estado;
             }
+
+            return true;
+        }
+
+        public static bool Cancelar(Agenda Agenda)
+        {
+            
+            var currentAgenda = Get(Agenda.Id.ToString());
+            if (Get(currentAgenda.Id.ToString()) != null && Agenda.Estado)
+            {
+                currentAgenda.Estado = false;
+                return true;
+            }
+
+            return false;
         }
 
         public static IList<Agenda> GetAll()

@@ -12,7 +12,7 @@ namespace ClinicaViavaEstetica.Models
         public string SobreNome { get; set; }
         public string Celular { get; set; }
         public string Documento { get; set; }
-        public virtual ICollection<Agenda> Agendas { get; set; }
+        public virtual IList<Agenda> Agendas { get; set; }
         public virtual Utilizador Utilizador { get; set; }
     }
 }

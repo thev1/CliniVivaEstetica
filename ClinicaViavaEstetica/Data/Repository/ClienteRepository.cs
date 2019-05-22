@@ -56,5 +56,10 @@ namespace ClinicaViavaEstetica.Data.Repository
         {
             throw new NotImplementedException();
         }
+
+        bool IRepository<Cliente>.Update(Cliente objecto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

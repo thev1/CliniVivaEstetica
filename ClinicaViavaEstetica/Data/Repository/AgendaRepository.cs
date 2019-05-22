@@ -23,6 +23,11 @@ namespace ClinicaViavaEstetica.Data.Repository
             throw new NotImplementedException();
         }
 
+        public bool Cancelar(Agenda objecto)
+        {
+            return AgendaData.Cancelar(objecto);
+        }
+
         public Agenda get(string Id)
         {
             _Mock.Setup(x => x.get(Id))
@@ -49,9 +54,12 @@ namespace ClinicaViavaEstetica.Data.Repository
             return _Mock.Object.List();
         }
 
-        public void Update(Agenda objecto)
+        public bool Update(Agenda objecto)
         {
-            throw new NotImplementedException();
+             _Mock.Setup(x => x.Update(objecto))
+                  .Returns(AgendaData.Update(objecto));
+
+             return _Mock.Object.Update(objecto);
         }
     }
 }

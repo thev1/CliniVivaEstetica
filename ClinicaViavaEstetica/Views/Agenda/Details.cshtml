@@ -1,0 +1,46 @@
+﻿@model ClinicaViavaEstetica.Models.Agenda
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="row">
+    <hr />
+    <h2 class="text-info">Detalhe Agendas</h2>
+    <hr />
+    <div class="col-md-8 col-md-offset-2">
+        <div>
+            <h4>Detalhe</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Descricao)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Estado)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Estado)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DataMarcacao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DataMarcacao)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Listar", "Index")
+        </p>
+    </div>
+</div>

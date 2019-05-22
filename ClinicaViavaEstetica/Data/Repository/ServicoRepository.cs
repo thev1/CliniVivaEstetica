@@ -44,7 +44,7 @@ namespace ClinicaViavaEstetica.Data.Repository
             return _Mock.Object.List();
         }
 
-        public void Update(Servico objecto)
+        public bool Update(Servico objecto)
         {
             throw new NotImplementedException();
         }

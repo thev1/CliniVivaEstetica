@@ -275,6 +275,9 @@
     <Content Include="Views\Agenda\Index.cshtml" />
     <Content Include="Views\Auth\Index.cshtml" />
     <Content Include="Views\Agenda\Create.cshtml" />
+    <Content Include="Views\Agenda\Edit.cshtml" />
+    <Content Include="Views\Agenda\Details.cshtml" />
+    <Content Include="Views\Agenda\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

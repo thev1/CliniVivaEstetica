@@ -14,7 +14,7 @@ namespace ClinicaViavaEstetica.Data.Interfaces
 
         void Delete(T objecto);
 
-        void Update(T objecto);
+        bool Update(T objecto);
 
         T get(string Id);
     }

@@ -8,6 +8,6 @@ namespace ClinicaViavaEstetica.Data.Interfaces
 {
     public interface IAgendaRepository: IRepository<Agenda>
     {
-
+        bool Cancelar(Agenda objecto);
     }
 }
