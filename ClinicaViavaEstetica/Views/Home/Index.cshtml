@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Home";
+    if(Session["id"] == null)
+    {
+        Response.Redirect("~/Auth/Index");
+    }
+}
+
+<p>Dashboard</p>
