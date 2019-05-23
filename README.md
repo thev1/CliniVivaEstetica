@@ -10,3 +10,10 @@ Password = 12345678"
 ___________________________
 UserName  = carlos.quingles,
 Password = 12345678
+
+# Referências Bibliográficas
+Unit.Mvc5 para injeção de dependência
+https://www.c-sharpcorner.com/article/dependency-injection-in-asp-net-mvc-5/
+
+# Inversão de contole (IoC) vs Injeção 
+https://www.devmedia.com.br/inversao-de-controle-x-injecao-de-dependencia/18763
