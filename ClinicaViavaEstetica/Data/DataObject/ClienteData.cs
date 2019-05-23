@@ -33,7 +33,7 @@ namespace ClinicaViavaEstetica.Data.DataObject
             return cliente;
         }
 
-        public static void Update(Cliente cliente)
+        public static bool Update(Cliente cliente)
         {
             var currentCliente = Get(cliente.Id.ToString());
             if (Get(currentCliente.Id.ToString()) != null)
@@ -41,7 +41,10 @@ namespace ClinicaViavaEstetica.Data.DataObject
                 currentCliente.Nome = cliente.Nome;
                 currentCliente.SobreNome = cliente.SobreNome;
                 currentCliente.Documento = cliente.Documento;
+                currentCliente.Celular = cliente.Celular;
             }
+
+            return true;
         }
 
         public static IList<Cliente> GetAll()
@@ -57,6 +60,7 @@ namespace ClinicaViavaEstetica.Data.DataObject
                 Nome = "Valdanio",
                 SobreNome = "Jessico",
                 Celular = "2934435536",
+                Documento =  "0002346657la065",
                 Utilizador = new Utilizador()
                 {
                     Id = Guid.NewGuid(),
@@ -71,6 +75,8 @@ namespace ClinicaViavaEstetica.Data.DataObject
                 Id = Guid.NewGuid(),
                 Nome = "Carlos",
                 SobreNome = "Quingles",
+                Celular = "2934435577",
+                Documento = "0001116657la065",
                 Utilizador = new Utilizador()
                 {
                     Id = Guid.NewGuid(),
@@ -85,12 +91,14 @@ namespace ClinicaViavaEstetica.Data.DataObject
                 Id = Guid.NewGuid(),
                 Nome = "Anacleto",
                 SobreNome = "Mimoso",
+                Celular = "2934432226",
+                Documento = "0002776657la065",
                 Utilizador = new Utilizador()
                 {
                     Id = Guid.NewGuid(),
                     UserName  = "anacleto.mimoso",
                     Password = "12345678",
-
+                    
                 }
             };
 
@@ -99,6 +107,8 @@ namespace ClinicaViavaEstetica.Data.DataObject
                 Id = Guid.NewGuid(),
                 Nome = "Bongo",
                 SobreNome = "Caihso",
+                Celular = "2934435536",
+                Documento = "000234888la065",
                 Utilizador = new Utilizador()
                 {
                     Id = Guid.NewGuid(),

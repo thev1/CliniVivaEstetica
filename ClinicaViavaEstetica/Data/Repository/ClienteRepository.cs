@@ -52,14 +52,13 @@ namespace ClinicaViavaEstetica.Data.Repository
             return _Mock.Object.List();
         }
 
-        public void Update(Cliente objecto)
-        {
-            throw new NotImplementedException();
-        }
 
-        bool IRepository<Cliente>.Update(Cliente objecto)
+        public bool Update(Cliente objecto)
         {
-            throw new NotImplementedException();
+            _Mock.Setup(x => x.Update(objecto))
+                  .Returns(ClienteData.Update(objecto));
+
+            return _Mock.Object.Update(objecto);
         }
     }
 }

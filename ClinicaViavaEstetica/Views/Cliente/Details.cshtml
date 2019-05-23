@@ -1,0 +1,54 @@
+﻿@model ClinicaViavaEstetica.Models.Cliente
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="row">
+    <hr />
+    <h2 class="text-info">Perfil</h2>
+    <hr />
+    <div class="col-md-8 col-md-offset-2">
+        <h2>Perfil do Cliente</h2>
+
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SobreNome)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SobreNome)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Celular)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Celular)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Documento)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Documento)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Alterar Perfil", "Edit")
+        </p>
+    </div>
+</div>

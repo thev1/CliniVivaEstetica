@@ -29,12 +29,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Agenda", "Index", "Agenda")</li>
-                    <li>@Html.ActionLink("Cliente", "Index", "Cliente")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Alterar Perfil", "Edit", "Cliente") </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> @Session["nome"]</a></li>
-                    <li><i class="glyphicon glyphicon-log-in"></i>@Html.ActionLink("Sair", "Logout", "Auth")</li>
+                    <li>@Html.ActionLink("Perfil do Cliente", "Details", "Cliente")</li>
+                    <li>@Html.ActionLink("Sair", "Logout", "Auth")</li>
                 </ul>
             </div>
 

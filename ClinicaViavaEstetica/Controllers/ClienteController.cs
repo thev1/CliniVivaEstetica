@@ -33,9 +33,9 @@ namespace ClinicaViavaEstetica.Controllers
         }
 
         // GET: Cliente/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details()
         {
-            return View();
+            return View(this._ClienteRepository.get(Session["id"].ToString()));
         }
 
         // GET: Cliente/Create
@@ -60,21 +60,21 @@ namespace ClinicaViavaEstetica.Controllers
             }
         }
 
-        // GET: Cliente/Edit/5
-        public ActionResult Edit(int id)
+        // GET: Cliente/Edit
+        public ActionResult Edit()
         {
-            return View();
+            return View(this._ClienteRepository.get(Session["id"].ToString()));
         }
 
         // POST: Cliente/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Cliente cliente)
         {
             try
             {
                 // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                this._ClienteRepository.Update(cliente);
+                return RedirectToAction("Details");
             }
             catch
             {
