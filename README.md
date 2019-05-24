@@ -23,3 +23,6 @@ https://www.eduardopires.net.br/2013/08/asp-net-mvc-utilizando-automapper-com-vi
 
 # View Model
 https://www.eduardopires.net.br/2013/08/asp-net-mvc-view-model-pattern-quando-e-como-utilizar/
+
+# Moq
+https://imasters.com.br/dotnet/net-usando-moq-em-testes-unitarios-parte-02
