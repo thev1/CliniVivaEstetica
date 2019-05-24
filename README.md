@@ -20,3 +20,6 @@ https://www.devmedia.com.br/inversao-de-controle-x-injecao-de-dependencia/18763
 
 # AutoMapper
 https://www.eduardopires.net.br/2013/08/asp-net-mvc-utilizando-automapper-com-view-model-pattern/
+
+# View Model
+https://www.eduardopires.net.br/2013/08/asp-net-mvc-view-model-pattern-quando-e-como-utilizar/
