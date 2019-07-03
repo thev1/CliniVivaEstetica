@@ -26,3 +26,9 @@ https://www.eduardopires.net.br/2013/08/asp-net-mvc-view-model-pattern-quando-e-
 
 # Moq
 https://imasters.com.br/dotnet/net-usando-moq-em-testes-unitarios-parte-02
+
+# Arquitetura de softwere
+https://www.eduardopires.net.br/curso-de-arquitetura-de-software-dotnet/
+
+# CQRS 
+https://www.eduardopires.net.br/2016/07/cqrs-o-que-e-onde-aplicar/
